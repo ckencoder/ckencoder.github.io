@@ -1,0 +1,22 @@
+h1 {
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	margin: 3em auto;
+	text-align: center;
+	padding: 1em;
+	width: 5em;
+	border-radius: .5em;
+	opacity: .9;
+}
+
+#encode {
+	background-color: #4da6ff;
+}
+
+#decode {
+	background-color: #ff1a1a;
+}
+
+* {
+	background-color: #036;
+}
