@@ -1,4 +1,4 @@
-var alphabet = '1:;2|/34~`"567[]89{}0!@#$%^&*()-_=+.,<>\' abcdefghijklmnopqrstuvwxyz';
+var alphabet = '1:;2|/34~`"567[]89{}0!@#$%^&*()-_=+.,<>\' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 $(document).ready(function() {
 	$('h1').mouseenter(function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		var x;
 		for (x in message) {
 			var position = alphabet.indexOf(message[x]);
-		   	var newPosition = (position + key) % 57;
+		   	var newPosition = (position + key) % 83;
 		   	var newCharacter = alphabet[newPosition];
 		    newMessage += newCharacter;
 	    }
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		var x;
 	    for (x in message) {
 		   	var position = alphabet.indexOf(message[x]);
-		   	var newPosition = (position + (57 - key)) % 57;
+		   	var newPosition = (position + (83 - key)) % 83;
 		   	var newCharacter = alphabet[newPosition];
 		    newMessage += newCharacter;
 	    }
