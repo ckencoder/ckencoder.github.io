@@ -1,4 +1,4 @@
-var alphabet = ' abcdefghijklmnopqrstuvwxyz';
+var alphabet = '1234567890!@#$%^&*()-_=+ abcdefghijklmnopqrstuvwxyz';
 
 $(document).ready(function() {
 	$('h1').mouseenter(function() {
@@ -11,12 +11,12 @@ $(document).ready(function() {
 	
 	$('#encode').on('click', function() {
 		var message = prompt('Message:');
-	    var key = parseInt(prompt('Key:'));
-	    var newMessage = '';
+		var key = parseInt(prompt('Key:'));
+		var newMessage = '';
 		var x;
-	    for (x in message) {
-		   	var position = alphabet.indexOf(message[x]);
-		   	var newPosition = (position + key) % 27;
+		for (x in message) {
+			var position = alphabet.indexOf(message[x]);
+		   	var newPosition = (position + key) % 41;
 		   	var newCharacter = alphabet[newPosition];
 		    newMessage += newCharacter;
 	    }
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		var x;
 	    for (x in message) {
 		   	var position = alphabet.indexOf(message[x]);
-		   	var newPosition = (position + (27 - key)) % 27;
+		   	var newPosition = (position + (41 - key)) % 41;
 		   	var newCharacter = alphabet[newPosition];
 		    newMessage += newCharacter;
 	    }
