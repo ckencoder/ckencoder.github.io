@@ -11,7 +11,7 @@ $(document).ready(function() {
 	
 	$('#encode').on('click', function() {
 		var message = prompt('Message:');
-		var key = parseInt(prompt('Key:'));
+		var key = parseInt(prompt('Key(1-82):'));
 		var newMessage = '';
 		var x;
 		for (x in message) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	
 	$('#decode').on('click', function() {
 		var message = prompt('Message:');
-	    var key = parseInt(prompt('Key:'));
+	    var key = parseInt(prompt('Key(1-82):'));
 	    var newMessage = '';
 		var x;
 	    for (x in message) {
